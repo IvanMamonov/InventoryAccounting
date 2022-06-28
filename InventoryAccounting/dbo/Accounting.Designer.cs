@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "C:\Users\nasur\source\repos\InventoryAccounting\InventoryAccounting\dbo\Accounting.edmx" включено. 
+﻿// Создание кода T4 для модели "C:\Users\mamon\OneDrive\Рабочий стол\InventoryAccounting-master\InventoryAccounting\dbo\Accounting.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.
