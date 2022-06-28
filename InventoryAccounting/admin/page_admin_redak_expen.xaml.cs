@@ -46,6 +46,7 @@ namespace InventoryAccounting.admin
             storage_txt.Text = recInv.Storage.Name;
             employee_txt.Text = recInv.Employee.Name;
             this.DataContext = this;
+
         }
 
         private void employee_SelectionChanged(object sender, SelectionChangedEventArgs e)
