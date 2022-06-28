@@ -8,6 +8,6 @@ namespace InventoryAccounting
 {
     class Connection
     {
-        public static dbo.InventoryAccountingEntities connection = new dbo.InventoryAccountingEntities();
+        public static dbo.inventoybaseEntities connection = new dbo.inventoybaseEntities();
     }
 }

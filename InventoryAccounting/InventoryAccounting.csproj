@@ -97,10 +97,20 @@
     <Compile Include="admin\storage\page_storage.xaml.cs">
       <DependentUpon>page_storage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="dbo\Accounting.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Accounting.Context.tt</DependentUpon>
+    </Compile>
     <Compile Include="dbo\Accounting.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbo\Accounting.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Accounting.edmx</DependentUpon>
     </Compile>
     <Compile Include="dbo\Accounting_Card_Expenditure.cs">
       <DependentUpon>Accounting.tt</DependentUpon>
@@ -109,39 +119,6 @@
       <DependentUpon>Accounting.tt</DependentUpon>
     </Compile>
     <Compile Include="dbo\Connection.cs" />
-    <Compile Include="dbo\Employee.cs">
-      <DependentUpon>Accounting.tt</DependentUpon>
-    </Compile>
-    <Compile Include="dbo\Expenditure_Inventory.cs">
-      <DependentUpon>Accounting.tt</DependentUpon>
-    </Compile>
-    <Compile Include="dbo\Expenditure_Invoice.cs">
-      <DependentUpon>Accounting.tt</DependentUpon>
-    </Compile>
-    <Compile Include="dbo\Image_Inventory.cs">
-      <DependentUpon>Accounting.tt</DependentUpon>
-    </Compile>
-    <Compile Include="dbo\Inventory.cs">
-      <DependentUpon>Accounting.tt</DependentUpon>
-    </Compile>
-    <Compile Include="dbo\Position.cs">
-      <DependentUpon>Accounting.tt</DependentUpon>
-    </Compile>
-    <Compile Include="dbo\Receipt_Inventory.cs">
-      <DependentUpon>Accounting.tt</DependentUpon>
-    </Compile>
-    <Compile Include="dbo\Receipt_Invoice.cs">
-      <DependentUpon>Accounting.tt</DependentUpon>
-    </Compile>
-    <Compile Include="dbo\Storage.cs">
-      <DependentUpon>Accounting.tt</DependentUpon>
-    </Compile>
-    <Compile Include="dbo\sysdiagrams.cs">
-      <DependentUpon>Accounting.tt</DependentUpon>
-    </Compile>
-    <Compile Include="dbo\Type_Inventory.cs">
-      <DependentUpon>Accounting.tt</DependentUpon>
-    </Compile>
     <Page Include="admin\inventory\page_create_inventory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -254,19 +231,42 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="dbo\Accounting.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Accounting.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="dbo\Accounting.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Accounting.edmx</DependentUpon>
-    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dbo\Employee.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbo\Expenditure_Inventory.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbo\Expenditure_Invoice.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbo\Image_Inventory.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbo\Inventory.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbo\Position.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbo\Receipt_Inventory.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbo\Receipt_Invoice.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbo\Storage.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbo\sysdiagrams.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbo\Type_Inventory.cs">
+      <DependentUpon>Accounting.tt</DependentUpon>
     </Compile>
     <Compile Include="employee\Card\page_card.xaml.cs">
       <DependentUpon>page_card.xaml</DependentUpon>
@@ -371,16 +371,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dbo\Accounting.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Accounting.Context.cs</LastGenOutput>
-      <DependentUpon>Accounting.edmx</DependentUpon>
-    </Content>
-    <Content Include="dbo\Accounting.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Accounting.edmx</DependentUpon>
-      <LastGenOutput>Accounting.cs</LastGenOutput>
-    </Content>
     <Resource Include="employee\img\кепка.jpg" />
     <Resource Include="employee\img\куртка.jpg" />
     <Resource Include="employee\img\лопата.jpg" />
@@ -393,6 +383,17 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="dbo\Accounting.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Accounting.edmx</DependentUpon>
+      <LastGenOutput>Accounting.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="dbo\Accounting.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Accounting.edmx</DependentUpon>
+      <LastGenOutput>Accounting.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
